@@ -139,7 +139,7 @@ export default function Hero() {
             </button>
             <button
               onClick={handleLearnMore}
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 max-md:px-5 max-md:py-2.5 rounded-xl text-sm max-md:text-xs font-semibold uppercase tracking-wider font-display text-white border border-slate-700 hover:border-amber-500 hover:bg-slate-900/60 transition-colors cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 max-md:px-5 max-md:py-2.5 rounded-xl text-sm max-md:text-xs font-semibold uppercase tracking-wider font-display text-white bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 shadow-lg shadow-amber-500/10 hover:shadow-amber-500/20 transition-all duration-250 cursor-pointer"
             >
               Pelajari Layanan
             </button>
