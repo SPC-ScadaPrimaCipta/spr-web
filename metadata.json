@@ -1,0 +1,6 @@
+{
+  "name": "PT Sakatoyo Prima Resources (SPR)",
+  "description": "Profil Perusahaan PT Sakatoyo Prima Resources (SPR) - Solusi Rekayasa Proses Penambangan, Pengolahan Mineral, Metalurgi, dan Sumber Daya Berkelanjutan",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

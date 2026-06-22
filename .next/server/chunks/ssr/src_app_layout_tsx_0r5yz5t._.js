@@ -1,0 +1,3 @@
+module.exports=[27572,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"id",children:(0,b.jsx)("body",{className:"bg-slate-950 text-slate-100 antialiased overflow-x-hidden selection:bg-amber-500 selection:text-slate-950",children:a})})},"metadata",0,{title:"PT Sakatoyo Prima Resources (SPR)",description:"Profil Perusahaan PT Sakatoyo Prima Resources (SPR) - Solusi Rekayasa Proses Penambangan, Pengolahan Mineral, Metalurgi, dan Sumber Daya Berkelanjutan"}])},50645,a=>{a.n(a.i(27572))}];
+
+//# sourceMappingURL=src_app_layout_tsx_0r5yz5t._.js.map
