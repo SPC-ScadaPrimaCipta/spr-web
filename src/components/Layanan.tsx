@@ -49,7 +49,7 @@ export default function Layanan() {
           <h2 className="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">
             Services
           </h2>
-          <p className="font-sans font-light text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="font-sans font-light text-slate-300 text-sm sm:text-base leading-relaxed">
             SPR menawarkan layanan terintegrasi mulai dari studi awal rekayasa hingga program peningkatan kompetensi praktis berbasis industri.
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto rounded-full" />

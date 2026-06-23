@@ -158,10 +158,10 @@ export default function Hero() {
                     }}
                     className="flex flex-col items-center text-center space-y-2 group cursor-pointer"
                   >
-                    <div className="h-10 max-md:h-8 w-10 max-md:w-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-300 group-hover:bg-amber-500/25 group-hover:border-amber-400/50 transition-all">
-                      <IconComp className="h-5 max-md:h-4 w-5 max-md:w-4" />
+                    <div className="h-11 max-md:h-9 w-11 max-md:w-9 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-300 group-hover:bg-amber-500/25 group-hover:border-amber-400/50 transition-all">
+                      <IconComp className="h-5.5 max-md:h-4.5 w-5.5 max-md:w-4.5" />
                     </div>
-                    <span className="text-[10px] max-md:text-[8px] font-semibold text-slate-200 group-hover:text-white leading-tight transition-colors">
+                    <span className="text-[12px] max-md:text-[9px] font-semibold text-slate-200 group-hover:text-white leading-tight transition-colors">
                       {item.title}
                     </span>
                   </button>
