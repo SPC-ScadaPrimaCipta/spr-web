@@ -76,7 +76,7 @@ export default function Hero() {
       {/* SECTION 1: Unified Corporate Header */}
       <section
         id="beranda"
-        className="relative min-h-[90vh] max-md:min-h-[80vh] pt-32 pb-16 max-md:pt-20 max-md:pb-10 flex flex-col justify-center items-center bg-slate-950 text-white overflow-hidden text-center"
+        className="relative min-h-[90vh] max-md:min-h-[60vh] pt-32 max-md:pt-14 pb-16 max-md:pb-6 flex flex-col justify-center items-center bg-slate-950 text-white overflow-hidden text-center"
       >
          <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 pointer-events-none transform transition-transform duration-[10s]"
@@ -88,17 +88,16 @@ export default function Hero() {
 
 
         {/* Ambient background glows */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-137.5 h-137.5 rounded-full bg-linear-to-tr from-amber-500/20 to-orange-600/5 blur-3xl pointer-events-none z-0" />
-
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8 max-md:space-y-5 flex flex-col items-center">
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8 max-md:space-y-4 flex flex-col items-center">
 
           {/* Large Display Titles */}
-          <div className="space-y-4 max-w-3xl">
+          <div className="space-y-4 max-md:space-y-2 max-w-3xl">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="font-display font-black text-xl sm:text-5xl lg:text-5xl tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500"
+              className="font-display font-black text-xl sm:text-5xl lg:text-5xl max-md:text-lg tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500"
             >
               SAKATOYO PRIMA RESOURCES
             </motion.h1>
@@ -107,7 +106,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-display text-xs sm:text-base lg:text-lg font-medium text-slate-300 leading-relaxed max-w-2xl mx-auto"
+              className="font-display text-xs sm:text-base lg:text-lg max-md:text-[10px] font-medium text-slate-300 leading-relaxed max-w-2xl mx-auto"
             >
               {companyProfile.tagline}
             </motion.p>
@@ -118,20 +117,20 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full sm:w-auto"
+            className="flex flex-col sm:flex-row max-md:grid max-md:grid-cols-2 gap-4 max-md:gap-3 items-center justify-center w-full sm:w-auto"
           >
             <button
               onClick={handleContactUs}
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 max-md:px-5 max-md:py-2.5 rounded-xl text-sm max-md:text-xs font-bold uppercase tracking-wider font-display text-slate-950 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 shadow-lg shadow-orange-500/20 transition-all duration-250 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 max-md:px-3 py-3.5 max-md:py-1.5 rounded-xl max-md:rounded-lg text-sm max-md:text-[10px] font-bold uppercase tracking-wider font-display text-slate-950 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 shadow-lg max-md:shadow-md shadow-orange-500/20 transition-all duration-250 cursor-pointer"
             >
               Hubungi Kami
-              <ArrowRight className="ml-2.5 h-4.5 w-4.5" />
+              <ArrowRight className="ml-2.5 max-md:ml-1.5 h-4.5 max-md:h-3.5 w-4.5 max-md:w-3.5" />
             </button>
             <button
               onClick={handleLearnMore}
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 max-md:px-5 max-md:py-2.5 rounded-xl text-sm max-md:text-xs font-semibold uppercase tracking-wider font-display text-white bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 shadow-lg shadow-amber-500/10 hover:shadow-amber-500/20 transition-all duration-250 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 max-md:px-3 py-3.5 max-md:py-1.5 rounded-xl max-md:rounded-lg text-sm max-md:text-[10px] font-semibold uppercase tracking-wider font-display text-white bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 shadow-lg max-md:shadow-md shadow-amber-500/10 hover:shadow-amber-500/20 transition-all duration-250 cursor-pointer"
             >
-              Layanan
+              Services
             </button>
           </motion.div>
 
@@ -140,9 +139,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="w-full max-w-4xl pt-10 border-t border-white/10"
+            className="w-full max-w-4xl pt-10 max-md:pt-4 border-t border-white/10"
           >
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-md:gap-2">
               {mengapaSPR.map((item, idx) => {
                 const IconComp = mengapaIconMap[item.icon] || Award;
                 return (
@@ -159,10 +158,10 @@ export default function Hero() {
                     }}
                     className="flex flex-col items-center text-center space-y-2 group cursor-pointer"
                   >
-                    <div className="h-10 w-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400 group-hover:bg-amber-500/10 group-hover:border-amber-500/30 transition-all">
-                      <IconComp className="h-5 w-5" />
+                    <div className="h-10 max-md:h-8 w-10 max-md:w-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-300 group-hover:bg-amber-500/25 group-hover:border-amber-400/50 transition-all">
+                      <IconComp className="h-5 max-md:h-4 w-5 max-md:w-4" />
                     </div>
-                    <span className="text-[10px] font-semibold text-slate-400 group-hover:text-slate-200 leading-tight transition-colors">
+                    <span className="text-[10px] max-md:text-[8px] font-semibold text-slate-200 group-hover:text-white leading-tight transition-colors">
                       {item.title}
                     </span>
                   </button>
