@@ -135,11 +135,11 @@ export default function Navbar({ activeSection }: NavbarProps) {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="lg:hidden border-t border-slate-800 bg-slate-950/98 backdrop-blur-lg overflow-hidden"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="lg:hidden border-t border-slate-800 bg-slate-950/98 backdrop-blur-lg"
             id="mobile-menu"
           >
             <div className="px-4 pt-3 pb-6 space-y-1.5 sm:px-6">
