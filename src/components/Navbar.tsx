@@ -132,7 +132,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
                       : "text-slate-300 hover:text-white"
                   }`}
                 >
-                  {link.name === "Solusi dan Teknologi" ? "Teknologi" : link.name}
+                  {link.name === "Solusi dan Teknologi" ? "Solusi dan Teknologi" : link.name}
                 </a>
               );
             })}
