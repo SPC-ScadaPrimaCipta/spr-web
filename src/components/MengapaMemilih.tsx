@@ -26,7 +26,7 @@ export default function MengapaMemilih() {
           <span className="font-mono text-xs font-bold tracking-widest text-amber-500 uppercase block">
             Kemitraan Jangka Panjang
           </span>
-          <h2 className="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">
+          <h2 className="font-display font-black text-2xl sm:text-4xl text-white tracking-tight">
             Mengapa Memilih SPR
           </h2>
           <p className="font-sans font-light text-slate-400 text-sm sm:text-base leading-relaxed">

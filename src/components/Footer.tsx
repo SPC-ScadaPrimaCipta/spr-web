@@ -34,7 +34,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3">
               <div className="flex flex-col">
                 <span className="font-display font-extrabold text-lg text-amber-500 uppercase tracking-wider">
-                  SAKATOYO PRIMA RESOURCES
+                  Sakatoyo Prima Resources
                 </span>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function Footer() {
                     <Phone className="h-4 w-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider block">
+                    <span className="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider block">
                       Telepon
                     </span>
                     <a href={`tel:${kontakInfo.phone}`} className="font-display font-bold text-sm text-white hover:text-amber-400 transition-colors">
@@ -96,7 +96,7 @@ export default function Footer() {
                     <Mail className="h-4 w-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider block">
+                    <span className="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider block">
                       Email
                     </span>
                     <a href={`mailto:${kontakInfo.email}`} className="font-sans text-sm text-slate-300 hover:text-amber-400 transition-colors block font-light">
@@ -111,7 +111,7 @@ export default function Footer() {
                     <Globe className="h-4 w-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider block">
+                    <span className="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider block">
                       Website Resmi
                     </span>
                     <a href={kontakInfo.rawWebsite} target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-amber-500 hover:text-amber-400 font-bold transition-all flex items-center">
@@ -131,7 +131,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1">
             <span className="font-display font-extrabold text-xs text-white uppercase tracking-wider">
-              SAKATOYO PRIMA RESOURCES
+              Sakatoyo Prima Resources
             </span>
             <p className="font-sans text-xs text-slate-500 font-light">
               &copy; {new Date().getFullYear()} Sakatoyo Prima Resources. All Rights Reserved. Bandung, Indonesia.

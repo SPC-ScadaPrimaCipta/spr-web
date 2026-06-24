@@ -25,7 +25,7 @@ export default function LayananPendukung() {
             <span className="font-mono text-xs font-bold tracking-widest text-emerald-400 uppercase block">
               Mendukung Ekosistem Hulu ke Hilir
             </span>
-            <h2 className="font-display font-black text-3xl sm:text-4xl text-white tracking-tight leading-tight">
+            <h2 className="font-display font-black text-2xl sm:text-4xl text-white tracking-tight leading-tight">
               Other Services
             </h2>
             <p className="font-sans font-light text-slate-300 text-sm sm:text-base leading-relaxed">
@@ -67,9 +67,9 @@ export default function LayananPendukung() {
         <div className="mt-12 bg-slate-900/40 border border-slate-800/60 p-4.5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
           <div className="flex items-center space-x-2">
             <span className="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="font-bold text-white tracking-wide">KOMITMEN 3R & SIRKULAR EKONOMI</span>
+            <span className="font-bold text-white tracking-wide">Komitmen 3R & Sirkular Ekonomi</span>
           </div>
-          <p className="font-sans font-light text-slate-400 text-center sm:text-right text-[11px] leading-tight">
+          <p className="font-sans font-light text-slate-400 text-center sm:text-right text-xs leading-tight">
             *Merujuk pada penanganan limbah B3, mineral berkadar rendah, dan optimalisasi tailing sisa pengolahan.
           </p>
         </div>

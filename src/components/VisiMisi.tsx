@@ -14,7 +14,7 @@ export default function VisiMisi() {
           <h2 className="font-display font-black text-xs uppercase tracking-widest text-amber-400">
             Arah Strategis Perusahaan
           </h2>
-          <h3 className="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">
+          <h3 className="font-display font-bold text-2xl sm:text-4xl text-white tracking-tight">
             Visi Misi
           </h3>
           <div className="w-16 h-1 bg-amber-500 mx-auto rounded-full" />
@@ -37,17 +37,17 @@ export default function VisiMisi() {
               <div className="inline-flex items-center justify-center p-3 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
                 <Telescope className="h-6 w-6" />
               </div>
-              <h4 className="font-display font-black text-2xl tracking-wide text-white uppercase">
+              <h4 className="font-display font-black text-base sm:text-lg tracking-wide text-white">
                 Visi Kami
               </h4>
-              <p className="font-sans font-light text-slate-300 text-lg leading-relaxed">
+              <p className="font-sans font-light text-slate-300 text-sm sm:text-base leading-relaxed">
                 "{visiMisi.visi}"
               </p>
             </div>
 
             <div className="mt-8 pt-6 border-t border-slate-800/80">
               <div className="text-xs font-mono font-bold tracking-widest text-amber-400 uppercase">
-                SAKATOYO PRIMA RESOURCES
+                Sakatoyo Prima Resources
               </div>
             </div>
           </motion.div>
@@ -56,7 +56,7 @@ export default function VisiMisi() {
           <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
             <div className="flex items-center space-x-3 mb-2">
               <div className="h-10 w-1 bg-amber-500 rounded-full" />
-              <h4 className="font-display font-bold text-2xl tracking-wide text-white">
+              <h4 className="font-display font-bold text-base sm:text-lg tracking-wide text-white">
                 Misi Operasional
               </h4>
             </div>

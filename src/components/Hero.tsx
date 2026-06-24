@@ -106,7 +106,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-display text-xs sm:text-base lg:text-lg max-md:text-[10px] font-medium text-slate-300 leading-relaxed max-w-2xl mx-auto"
+              className="font-display text-xs sm:text-base lg:text-lg font-medium text-slate-300 leading-relaxed max-w-2xl mx-auto"
             >
               {companyProfile.tagline}
             </motion.p>
@@ -121,14 +121,14 @@ export default function Hero() {
           >
             <button
               onClick={handleContactUs}
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 max-md:px-3 py-3.5 max-md:py-1.5 rounded-xl max-md:rounded-lg text-sm max-md:text-[10px] font-bold uppercase tracking-wider font-display text-slate-950 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 shadow-lg max-md:shadow-md shadow-orange-500/20 transition-all duration-250 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 max-md:px-3 py-3.5 max-md:py-1.5 rounded-xl max-md:rounded-lg text-sm max-md:text-xs font-bold uppercase tracking-wider font-display text-slate-950 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 shadow-lg max-md:shadow-md shadow-orange-500/20 transition-all duration-250 cursor-pointer"
             >
               Hubungi Kami
               <ArrowRight className="ml-2.5 max-md:ml-1.5 h-4.5 max-md:h-3.5 w-4.5 max-md:w-3.5" />
             </button>
             <button
               onClick={handleLearnMore}
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 max-md:px-3 py-3.5 max-md:py-1.5 rounded-xl max-md:rounded-lg text-sm max-md:text-[10px] font-semibold uppercase tracking-wider font-display text-white bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 shadow-lg max-md:shadow-md shadow-amber-500/10 hover:shadow-amber-500/20 transition-all duration-250 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 max-md:px-3 py-3.5 max-md:py-1.5 rounded-xl max-md:rounded-lg text-sm max-md:text-xs font-semibold uppercase tracking-wider font-display text-white bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 shadow-lg max-md:shadow-md shadow-amber-500/10 hover:shadow-amber-500/20 transition-all duration-250 cursor-pointer"
             >
               Services
             </button>
@@ -161,7 +161,7 @@ export default function Hero() {
                     <div className="h-11 max-md:h-9 w-11 max-md:w-9 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-300 group-hover:bg-amber-500/25 group-hover:border-amber-400/50 transition-all">
                       <IconComp className="h-5.5 max-md:h-4.5 w-5.5 max-md:w-4.5" />
                     </div>
-                    <span className="text-[12px] max-md:text-[9px] font-semibold text-slate-200 group-hover:text-white leading-tight transition-colors">
+                    <span className="text-xs font-semibold text-slate-200 group-hover:text-white leading-tight transition-colors">
                       {item.title}
                     </span>
                   </button>
@@ -193,7 +193,7 @@ export default function Hero() {
               </div>
 
               {/* Company description lead text */}
-              <p className="font-sans font-light text-slate-300 text-base leading-relaxed">
+              <p className="font-sans font-light text-slate-300 text-sm sm:text-base leading-relaxed">
                 Sakatoyo Prima Resources (SPR) didukung oleh para profesional berpengalaman luas di sektor pertambangan nasional untuk menghadirkan komitmen rekayasa berujung pada peningkatan profitabilitas berkelanjutan pelanggan kami.
               </p>
 

@@ -26,12 +26,12 @@ export default function Teknologi() {
             <span className="font-mono text-xs font-bold tracking-widest text-amber-500 uppercase block">
               Inovasi & Pendekatan Rekayasa
             </span>
-            <h2 className="font-display font-black text-3xl sm:text-4xl text-white tracking-tight leading-none">
+            <h2 className="font-display font-black text-2xl sm:text-4xl text-white tracking-tight leading-none">
               Solusi dan Teknologi
             </h2>
           </div>
           <div className="lg:col-span-8">
-            <p className="font-sans font-light text-slate-300 text-base sm:text-lg leading-relaxed max-w-4xl">
+                    <p className="font-sans font-light text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl">
               {teknologiPendekatan.description}
             </p>
           </div>
@@ -70,12 +70,10 @@ export default function Teknologi() {
                   </div>
 
                   <div className="space-y-3">
-                    <h3 className={`font-display font-bold tracking-tight text-white ${
-                      isFirst ? "text-xl sm:text-2xl" : "text-lg sm:text-xl"
-                    }`}>
+                    <h3 className="font-display font-bold tracking-tight text-white text-base sm:text-lg">
                       {item.title}
                     </h3>
-                    <p className="font-sans font-light text-slate-300 text-sm sm:text-base leading-relaxed">
+                    <p className="font-sans font-light text-slate-300 text-xs sm:text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>

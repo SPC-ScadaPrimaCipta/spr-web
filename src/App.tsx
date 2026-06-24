@@ -12,33 +12,33 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("beranda");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "beranda",
-        "visi-misi",
-        "teknologi",
-        "layanan",
-        "layanan-pendukung",
-        "mengapa-spr",
-        "kontak",
-      ];
-      
-      const scrollPosition = window.scrollY + 160; // offset factor
+    const NAVBAR_HEIGHT = 80;
+    const LAST = "kontak";
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const top = element.offsetTop;
-          const height = element.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
-            break;
-          }
+    const handleScroll = () => {
+      const { scrollY, innerHeight } = window;
+      const docHeight = document.documentElement.scrollHeight;
+      const scrollPos = scrollY + NAVBAR_HEIGHT + 1;
+
+      if (scrollY + innerHeight >= docHeight - 10) {
+        setActiveSection(LAST);
+        return;
+      }
+
+      let current: string | null = null;
+
+      for (const el of document.querySelectorAll<HTMLElement>("section, footer")) {
+        const id = el.id;
+        if (id && el.offsetTop <= scrollPos) {
+          current = id;
         }
       }
+
+      setActiveSection(current || "beranda");
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

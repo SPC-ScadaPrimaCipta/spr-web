@@ -24,6 +24,10 @@ export default function Navbar({ activeSection }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const sectionAlias: Record<string, string> = {
+    "layanan-pendukung": "layanan",
+  };
+
   const navLinks = [
     { name: "Home", href: "#beranda" },
     { name: "Visi & Misi", href: "#visi-misi" },
@@ -74,7 +78,10 @@ export default function Navbar({ activeSection }: NavbarProps) {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.href.substring(1);
+              const sectionId = link.href.substring(1);
+              const isActive =
+                activeSection === sectionId ||
+                sectionAlias[activeSection] === sectionId;
               return (
                 <a
                   key={link.name}
@@ -144,7 +151,10 @@ export default function Navbar({ activeSection }: NavbarProps) {
           >
             <div className="px-4 pt-3 pb-6 space-y-1.5 sm:px-6">
               {navLinks.map((link) => {
-                const isActive = activeSection === link.href.substring(1);
+                const sectionId = link.href.substring(1);
+                const isActive =
+                  activeSection === sectionId ||
+                  sectionAlias[activeSection] === sectionId;
                 return (
                   <a
                     key={link.name}
