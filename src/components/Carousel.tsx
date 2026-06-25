@@ -10,9 +10,10 @@ interface CarouselProps {
 export default function Carousel({ items, className = "" }: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    align: "center",
+    align: "start",
     skipSnaps: false,
     dragFree: false,
+    startIndex: 0,
   });
   const [selected, setSelected] = useState(0);
 
@@ -39,11 +40,11 @@ export default function Carousel({ items, className = "" }: CarouselProps) {
       {/* Mobile: Embla carousel with loop */}
       <div className="md:hidden -mx-4 px-4">
         <div className="overflow-hidden py-4" ref={emblaRef}>
-          <div className="flex gap-4">
+          <div className="flex">
             {items.map((child, idx) => (
               <div
                 key={idx}
-                className="shrink-0 grow-0 min-w-0 w-[80%]"
+                className="shrink-0 grow-0 min-w-0 w-[80%] pr-4"
               >
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
