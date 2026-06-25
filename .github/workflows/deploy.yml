@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Production
-      url: http://145.79.15.106:3008
+      url: https://sakatoyo.id
 
     steps:
       - name: Checkout code
