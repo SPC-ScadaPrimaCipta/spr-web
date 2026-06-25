@@ -1,0 +1,24 @@
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: spr-web
+        restart: unless-stopped
+        ports:
+            - "${PORT:-3002}:3002"
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.spr-web.rule=Host(`sakatoyo.id`)"
+            - "traefik.http.routers.spr-web.entrypoints=web,websecure"
+            - "traefik.http.services.spr-web.loadbalancer.server.port=3002"
+            - "traefik.http.routers.spr-web.tls=true"
+            - "traefik.http.routers.spr-web.tls.certresolver=mytlschallenge"
+        networks:
+            - root_default
+        environment:
+            NODE_ENV: production
+
+networks:
+    root_default:
+        external: true
