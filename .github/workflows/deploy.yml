@@ -1,0 +1,48 @@
+name: Production Deployment
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: http://145.79.15.106:3008
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Debug SSH connection from GitHub Runner
+        run: |
+          echo "GitHub runner public IP:"
+          curl -4 -s https://checkip.amazonaws.com || true
+
+          echo "REMOTE_HOST:"
+          echo "${{ secrets.REMOTE_HOST }}"
+
+          echo "Resolve host:"
+          getent ahosts ${{ secrets.REMOTE_HOST }} || true
+
+          echo "Test SSH port 22:"
+          nc -4 -vz -w 15 ${{ secrets.REMOTE_HOST }} 22
+
+      - name: Executing remote ssh commands
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          timeout: 120s
+          command_timeout: 30m
+          debug: true
+          script_stop: true
+          script: |
+            cd ${{ secrets.TARGET_DIR }}
+            git fetch origin master
+            git reset --hard origin/master
+            docker compose up -d --build
