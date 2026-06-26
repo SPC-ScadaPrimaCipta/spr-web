@@ -43,6 +43,6 @@ jobs:
           script_stop: true
           script: |
             cd ${{ secrets.TARGET_DIR }}
-            git fetch origin master
-            git reset --hard origin/master
+            git fetch origin main
+            git reset --hard origin/main
             docker compose up -d --build
