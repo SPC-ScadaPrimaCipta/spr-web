@@ -21,7 +21,7 @@ import {
   Heart
 } from "lucide-react";
 
-export default function Hero() {
+const Hero = React.memo(function Hero() {
   const mengapaIconMap: Record<string, any> = {
     Users: Users,
     Briefcase: Briefcase,
@@ -76,7 +76,7 @@ export default function Hero() {
       {/* SECTION 1: Unified Corporate Header */}
       <section
         id="beranda"
-        className="relative min-h-screen max-md:min-h-[60vh] pt-32 max-md:pt-14 pb-16 max-md:pb-6 flex flex-col justify-center items-center bg-slate-950 text-white overflow-hidden text-center"
+        className="relative min-h-dvh pt-32 max-md:pt-16 pb-16 max-md:pb-8 flex flex-col justify-center items-center bg-slate-950 text-white overflow-hidden text-center"
       >
          <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 pointer-events-none transform transition-transform duration-[10s]"
@@ -94,18 +94,16 @@ export default function Hero() {
           {/* Large Display Titles */}
           <div className="space-y-4 max-md:space-y-2 max-w-3xl">
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="font-display font-black text-xl sm:text-5xl lg:text-5xl max-md:text-lg tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500"
+              className="font-display font-black text-[1.35rem] sm:text-5xl lg:text-5xl tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500"
             >
               SAKATOYO PRIMA RESOURCES
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
               className="font-display text-xs sm:text-base lg:text-lg font-medium text-slate-300 leading-relaxed max-w-2xl mx-auto"
             >
               {companyProfile.tagline}
@@ -114,9 +112,8 @@ export default function Hero() {
 
           {/* Action CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-col sm:flex-row max-md:grid max-md:grid-cols-2 gap-4 max-md:gap-3 items-center justify-center w-full sm:w-auto"
           >
             <button
@@ -136,9 +133,8 @@ export default function Hero() {
 
           {/* Mengapa SPR Preview */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
             className="w-full max-w-4xl pt-10 max-md:pt-4 border-t border-white/10"
           >
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-md:gap-2">
@@ -177,7 +173,7 @@ export default function Hero() {
         id="profil-perusahaan"
         className="py-24 max-md:py-12 bg-slate-900 text-white relative border-t border-slate-950"
       >
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
         <div className="absolute top-1/2 right-10 -translate-y-1/2 w-80 h-80 rounded-full bg-orange-500/5 blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -231,4 +227,6 @@ export default function Hero() {
       </section>
     </>
   );
-}
+});
+
+export default Hero;

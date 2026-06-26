@@ -69,7 +69,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? "lg:bg-slate-900/95 lg:backdrop-blur-md lg:shadow-lg lg:border-b lg:border-slate-800/40 lg:py-3 max-lg:top-3 max-lg:left-3 max-lg:right-3 max-lg:bg-slate-950/90 max-lg:backdrop-blur-xl max-lg:shadow-[0_-8px_30px_rgba(0,0,0,0.5)] max-lg:rounded-2xl max-lg:py-3"
-            : "bg-slate-950/40 backdrop-blur-xs py-5"
+            : "bg-slate-950/40 backdrop-blur-xs lg:border-b lg:border-slate-800/20 py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
